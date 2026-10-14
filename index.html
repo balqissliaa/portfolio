@@ -51,46 +51,33 @@
          NAVBAR
     ========================== -->
 
+    
     <nav class="navbar">
-
         <div class="nav-container">
+            <a href="#home" class="logo">Balqis<span>.</span></a>
 
-            <a href="#home" class="logo">
-                ♡ Balqis.
-            </a>
+            <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-label="Buka menu navigasi"
+            aria-expanded="false"
+            aria-controls="navMenu"
+            type="button"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <div class="nav-menu">
-
-                <a href="#home">
-                    Home
-                </a>
-
-                <a href="#about">
-                    About
-                </a>
-
-                <a href="#skills">
-                    Skills
-                </a>
-
-                <a href="#projects">
-                    Projects
-                </a>
-
-                <a href="#contact">
-                    Contact
-                </a>
-
-            </div>
-
-            <a href="#contact" class="nav-button">
-                Let's Talk ♡
-            </a>
-
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-
     </nav>
-
 
     <!-- =========================
          HOME / HERO
@@ -693,4 +680,30 @@
 
         </div>
     </section>
+  
+    <script>
+    const navToggle = document.getElementById("navToggle");
+    const navMenu = document.getElementById("navMenu");
+    const navLinks = navMenu.querySelectorAll("a");
+
+    navToggle.addEventListener("click", function () {
+        const isOpen = navMenu.classList.toggle("active");
+
+        navToggle.classList.toggle("active", isOpen);
+        navToggle.setAttribute("aria-expanded", isOpen);
+        navToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Tutup menu navigasi" : "Buka menu navigasi"
+        );
+    });
+
+    navLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+        navMenu.classList.remove("active");
+        navToggle.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "Buka menu navigasi");
+        });
+    });
+    </script>
 </body>

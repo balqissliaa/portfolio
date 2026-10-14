@@ -1630,3 +1630,90 @@ img.profile-image {
         overflow-wrap: anywhere;
     }
 }
+
+/* Tombol hamburger */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 2px solid #f3c6d8;
+  border-radius: 12px;
+  background: #fff5f9;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background: #d86b99;
+  transition: 0.3s ease;
+}
+
+/* Tampilan tablet dan HP */
+@media (max-width: 768px) {
+  .nav-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #fff5f9;
+    border: 1px solid #f3d3e0;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(180, 100, 140, 0.12);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    list-style: none;
+  }
+
+  .nav-menu li a {
+    display: block;
+    width: 100%;
+    padding: 13px 15px;
+    border-radius: 10px;
+  }
+
+  .nav-menu li a:hover {
+    background: #e6f3df;
+  }
+
+  /* Animasi tombol menjadi X */
+  .nav-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
