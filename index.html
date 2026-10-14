@@ -1,709 +1,537 @@
+
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio pribadi berisi profil, skill, project, dan kontak.">
 
-    <title>Balqis | Cute Portfolio</title>
+    <title>Balqis | My Portfolio</title>
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Konfigurasi Tailwind -->
+    <script>
+        tailwind = {
+            config: {
+                theme: {
+                    extend: {
+                        colors: {
+                            pinkcute: "#F9A8D4",
+                            pinksoft: "#FCE7F3",
+                            pinkdark: "#DB2777",
+                            greencute: "#A7D7A9",
+                            greendark: "#4F8F58",
+                            cream: "#FFFDF7"
+                        },
+                        fontFamily: {
+                            cute: ["Poppins", "sans-serif"]
+                        }
+                    }
+                }
+            }
+        };
+    </script>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        pinkcute: "#F9A8D4",
-                        pinksoft: "#FCE7F3",
-                        pinkdark: "#DB2777",
-                        greencute: "#A7D7A9",
-                        greendark: "#4F8F58",
-                        cream: "#FFFDF7"
-                    },
-
-                    fontFamily: {
-                        cute: ["Poppins", "sans-serif"]
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- CSS -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
+<body>
 
-<body class="font-cute bg-cream text-gray-700">
-
-    <!-- =========================
-         NAVBAR
-    ========================== -->
-
-    
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">Balqis<span>.</span></a>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <nav class="nav-container container-fluid">
+            <a href="#home" class="logo text-decoration-none">
+                balqis<span>.</span>
+            </a>
 
             <button
-            class="nav-toggle"
-            id="navToggle"
-            aria-label="Buka menu navigasi"
-            aria-expanded="false"
-            aria-controls="navMenu"
-            type="button"
+                class="nav-toggle"
+                id="navToggle"
+                type="button"
+                aria-label="Buka menu navigasi"
+                aria-expanded="false"
+                aria-controls="navMenu"
             >
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <ul class="nav-menu" id="navMenu">
+            <ul class="nav-menu list-unstyled mb-0" id="navMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-contact">Contact Me</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- =========================
-         HOME / HERO
-    ========================== -->
+    <main>
 
-    <section id="home" class="hero">
-
-        <!-- Decorations -->
-
-        <div class="decoration flower-one">
-            🌸
-        </div>
-
-        <div class="decoration sparkle">
-            ✨
-        </div>
-
-        <div class="decoration heart">
-            ♡
-        </div>
-
-        <div class="decoration leaf">
-            🍀
-        </div>
-
-
-        <div class="hero-container">
-
-
-            <!-- HERO TEXT -->
-
-            <div class="hero-content">
-
-                <span class="welcome">
-                    ✨ Welcome to my portfolio!
-                </span>
-
-                <h1>
-
-                    Hello, I'm
-
-                    <span>
-                        Balqis
+        <!-- HOME / HERO -->
+        <section id="home" class="hero-section">
+            <div class="hero-container container">
+                <div class="hero-text">
+                    <span class="hero-label">
+                        ✿ Welcome to my portfolio
                     </span>
 
-                    <b>
-                        ♡
-                    </b>
+                    <h1>
+                        Hi, I'm <span>Balqis</span><br>
+                        Creative Learner &amp; Designer
+                    </h1>
 
-                </h1>
+                    <p class="hero-description">
+                        Saya tertarik dengan UI/UX Design, desain grafis,
+                        dan pengembangan website. Saya senang belajar,
+                        mencoba hal baru, dan mengubah ide menjadi karya
+                        digital yang menarik.
+                    </p>
 
-                <p>
-                    A creative student who loves design,
-                    technology, and creating cute things
-                    that bring ideas to life. 🌷
-                </p>
+                    <div class="hero-buttons d-flex flex-wrap gap-3">
+                        <a href="#projects" class="btn-primary-custom">
+                            Lihat Project <span>↗</span>
+                        </a>
 
+                        <a href="#contact" class="btn-secondary-custom">
+                            Hubungi Saya
+                        </a>
+                    </div>
 
-                <div class="hero-buttons">
-
-                    <a
-                        href="#projects"
-                        class="button-pink"
-                    >
-                        See My Work ✨
-                    </a>
-
-                    <a
-                        href="#about"
-                        class="button-green"
-                    >
-                        About Me 🌿
-                    </a>
-
+                    <div class="hero-note">
+                        <span>♡</span> Learning, creating, and growing.
+                    </div>
                 </div>
 
-            </div>
+                <div class="hero-visual">
+                    <div class="hero-decoration decoration-one">✿</div>
+                    <div class="hero-decoration decoration-two">♡</div>
 
+                    <div class="profile-frame">
+                        <!-- Ganti images/profile.jpg dengan foto milikmu -->
+                        <img
+                            src="images/profile.jpg"
+                            alt="Foto profil Balqis"
+                            class="profile-image"
+                        >
+                    </div>
 
-            <!-- PROFILE -->
-
-            <div class="profile-area">
-
-                <div class="pink-circle"></div>
-
-                <div class="green-circle"></div>
-
-
-                
-                <div class="profile-card">
-
-                    <img
-                    src="https://files.catbox.moe/jsp1f9.jpg"
-                    alt="Foto Profil Balqis"
-                    class="profile-image"
-                    >
-
-                <div class="profile-text">
-                    <h3>Web Designer</h3>
-                    <p>Design • Coding • Creativity</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         ABOUT
-    ========================== -->
-
-    <section id="about" class="about-section">
-
-        <div class="section-container">
-
-
-            <div class="section-title">
-
-                <span>
-                    ♡ GET TO KNOW ME ♡
-                </span>
-
-                <h2>
-                    About Me 🌷
-                </h2>
-
-            </div>
-
-
-            <div class="about-grid">
-
-
-                <!-- ABOUT CARD -->
-
-                <div class="about-card">
-
-                    <div class="about-heading">
-
-                        <div class="about-icon">
-                            🌱
-                        </div>
-
+                    <div class="floating-card floating-card-top">
+                        <span>🎨</span>
                         <div>
+                            <strong>Creative</strong>
+                            <small>Design &amp; Ideas</small>
+                        </div>
+                    </div>
 
-                            <h3>
-                                A Little About Me
-                            </h3>
+                    <div class="floating-card floating-card-bottom">
+                        <span>🌱</span>
+                        <div>
+                            <strong>Always Learning</strong>
+                            <small>One step at a time</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about-section py-5">
+            <div class="section-container container">
+                <div class="section-title text-center mb-5">
+                    <span class="section-label">Get to know me</span>
+                    <h2>About <span>Me</span></h2>
+                    <p>Sedikit cerita tentang diri dan hal yang saya sukai.</p>
+                </div>
+
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-12 col-lg-6">
+                        <div class="about-card h-100">
+                            <span class="about-icon">🌷</span>
+                            <h3>Hello, there!</h3>
 
                             <p>
-                                Creative mind & happy soul
+                                Saya adalah siswa SMK jurusan Teknik Jaringan
+                                Akses Telekomunikasi yang memiliki minat pada
+                                dunia desain dan teknologi. Saya suka membuat
+                                desain yang rapi, menarik, dan mudah digunakan.
                             </p>
 
-                        </div>
+                            <p>
+                                Melalui berbagai project, saya terus mengembangkan
+                                kemampuan desain, coding, dan problem solving.
+                                Saya percaya bahwa setiap project adalah
+                                kesempatan untuk belajar.
+                            </p>
 
+                            <a href="#contact" class="about-link">
+                                Let's connect <span>→</span>
+                            </a>
+                        </div>
                     </div>
 
-                    <p class="about-description">
+                    <div class="col-12 col-lg-6">
+                        <div class="row row-cols-1 row-cols-sm-2 g-3 h-100">
+                            <div class="col">
+                                <div class="info-card h-100">
+                                    <div class="info-icon">🎓</div>
+                                    <h4>Education</h4>
+                                    <p>Siswa SMK</p>
+                                    <small>Teknik Jaringan Akses Telekomunikasi</small>
+                                </div>
+                            </div>
 
-                        Halo! Nama Saya Balqis Aulia Zahra. Saya adalah siswa yang memiliki minat pada bidang desain ui/ux dan data analyst. Saya suka mempelajari cara menciptakan tampilan antarmuka yang menarik, mudah digunakan, serta memberikan pengalaman terbaik bagi pengguna. Tujuan karier saya adalah menjadi seorang Web Developer/Data Scientist yang mampu menghasilkan solusi kreatif, inovatif, dan berdampak positif bagi pengguna maupun perkembangan bisnis di era digital.
+                            <div class="col">
+                                <div class="info-card h-100">
+                                    <div class="info-icon">🎨</div>
+                                    <h4>Interest</h4>
+                                    <p>UI/UX Design</p>
+                                    <small>Graphic Design &amp; Web Design</small>
+                                </div>
+                            </div>
 
-                    </p>
+                            <div class="col">
+                                <div class="info-card h-100">
+                                    <div class="info-icon">💻</div>
+                                    <h4>Learning</h4>
+                                    <p>Web Development & Data Analyst</p>
+                                    <small>HTML, CSS, dan Python</small>
+                                </div>
+                            </div>
 
+                            <div class="col">
+                                <div class="info-card h-100">
+                                    <div class="info-icon">🌱</div>
+                                    <h4>My Goal</h4>
+                                    <p>Keep Growing</p>
+                                    <small>Belajar dan berkarya setiap hari</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-
-                <!-- ABOUT ITEMS -->
-
-                <div class="about-items">
-
-
-                    <div class="info-card">
-
-                        <div>
-                            🎨
-                        </div>
-
-                        <h3>
-                            Design
-                        </h3>
-
-                        <p>
-                            Creative visual design
-                        </p>
-
-                    </div>
-
-
-                    <div class="info-card">
-
-                        <div>
-                            💻
-                        </div>
-
-                        <h3>
-                            Coding
-                        </h3>
-
-                        <p>
-                            Web development
-                        </p>
-
-                    </div>
-
-
-                    <div class="info-card">
-
-                        <div>
-                            🌷
-                        </div>
-
-                        <h3>
-                            Creative
-                        </h3>
-
-                        <p>
-                            Exploring new ideas
-                        </p>
-
-                    </div>
-
-
-                    <div class="info-card">
-
-                        <div>
-                            ✨
-                        </div>
-
-                        <h3>
-                            Learning
-                        </h3>
-
-                        <p>
-                            Always improving
-                        </p>
-
-                    </div>
-
-                </div>
-
             </div>
+        </section>
 
+        <!-- SKILLS -->
+        <section id="skills" class="skills-section py-5">
+            <div class="section-container container">
+                <div class="section-title text-center mb-5">
+                    <span class="section-label">What I can do</span>
+                    <h2>My <span>Skills</span></h2>
+                    <p>Tools dan teknologi yang sedang saya pelajari.</p>
+                </div>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+                    <div class="col">
+                        <article class="skill-card green-border h-100 p-4 text-center">
+                            <div class="skill-logo">
+                                <img src="images/canva.webp" alt="Canva">
+                            </div>
+                            <h3>Canva</h3>
+                            <p>Membuat poster, presentasi, dan konten visual.</p>
+                            <span class="skill-tag">Graphic Design</span>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="skill-card pink-border h-100 p-4 text-center">
+                            <div class="skill-logo">
+                                <img src="images/figma.webp" alt="Figma">
+                            </div>
+                            <h3>Figma</h3>
+                            <p>Membuat wireframe, prototype, dan UI/UX design.</p>
+                            <span class="skill-tag">UI/UX Design</span>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="skill-card green-border h-100 p-4 text-center">
+                            <div class="skill-logo">
+                                <img src="images/html.webp" alt="HTML">
+                            </div>
+                            <h3>HTML</h3>
+                            <p>Menyusun struktur halaman website.</p>
+                            <span class="skill-tag">Web Structure</span>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="skill-card pink-border h-100 p-4 text-center">
+                            <div class="skill-logo">
+                                <img src="images/css.webp" alt="CSS">
+                            </div>
+                            <h3>CSS</h3>
+                            <p>Mengatur warna, layout, dan tampilan website.</p>
+                            <span class="skill-tag">Web Styling</span>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="skill-card green-border h-100 p-4 text-center">
+                            <div class="skill-logo">
+                                <img src="images/python.webp" alt="Python">
+                            </div>
+                            <h3>Python</h3>
+                            <p>Membuat program dan mempelajari logika coding.</p>
+                            <span class="skill-tag">Programming</span>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="skill-card pink-border h-100 p-4 text-center">
+                            <div class="skill-logo">
+                                <img src="images/javascript.jpg" alt="JavaScript">
+                            </div>
+                            <h3>JavaScript</h3>
+                            <p>Membuat website lebih interaktif dan dinamis.</p>
+                            <span class="skill-tag">Web Interaction</span>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="projects-section py-5">
+            <div class="section-container container">
+                <div class="section-title text-center mb-5">
+                    <span class="section-label">Things I've created</span>
+                    <h2>My <span>Projects</span></h2>
+                    <p>Beberapa project yang menjadi bagian dari perjalanan belajar saya.</p>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                    <div class="col">
+                        <article class="project-card h-100">
+                            <div class="project-image project-green">
+                                <span class="project-number">01</span>
+                                <span class="project-emoji">🌿</span>
+                                <span class="project-type">UI/UX Design</span>
+                            </div>
+
+                            <div class="project-content p-4">
+                                <span class="project-category">Wireframe</span>
+                                <h3>Bloomify</h3>
+                                <p>
+                                    Konsep desain aplikasi toko bunga dengan
+                                    warna pastel, tampilan lembut, dan navigasi
+                                    yang mudah dipahami.
+                                </p>
+                                <div class="project-tags">
+                                    <span>Figma</span>
+                                    <span>UI/UX</span>
+                                </div>
+                                <!-- Ganti # dengan link project milikmu -->
+                                <a href="#" class="project-link">
+                                    Lihat Project <span>↗</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="project-card h-100">
+                            <div class="project-image project-pink">
+                                <span class="project-number">02</span>
+                                <span class="project-emoji">📷</span>
+                                <span class="project-type">Graphic Design</span>
+                            </div>
+
+                            <div class="project-content p-4">
+                                <span class="project-category">Photo Editing</span>
+                                <h3>Caroussel</h3>
+                                <p>
+                                    Foto yang diedit menjadi Caroussel 
+                                    dari dokumentasi pelaksanaan skomda
+                                    mengajar
+                                </p>
+                                <div class="project-tags">
+                                    <span>Canva</span>
+                                    <span>Design</span>
+                                </div>
+                                <a href="#" class="project-link">
+                                    Lihat Project <span>↗</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="project-card h-100">
+                            <div class="project-image project-lilac">
+                                <span class="project-number">03</span>
+                                <span class="project-emoji">💻</span>
+                                <span class="project-type">Web Development</span>
+                            </div>
+
+                            <div class="project-content p-4">
+                                <span class="project-category">Portfolio</span>
+                                <h3>My Portfolio</h3>
+                                <p>
+                                    Website portfolio pribadi untuk menampilkan
+                                    profil, kemampuan, hasil karya, dan informasi
+                                    kontak dalam satu halaman.
+                                </p>
+                                <div class="project-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                                <a href="#home" class="project-link">
+                                    Kembali ke Home <span>↗</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact-section py-5">
+            <div class="container">
+                <div class="contact-content mx-auto text-center">
+                    <span class="section-label">Say hello</span>
+                    <h2>Let's Work <span>Together!</span></h2>
+
+                    <div class="row g-3 contact-buttons">
+                        <div class="col-12 col-sm-6">
+                            <a
+                                href="mailto:balqissliaa30@gmail.com"
+                                class="contact-button email-button h-100"
+                            >
+                                <span class="contact-icon">✉</span>
+                                <span class="contact-button-text">
+                                    <strong>Email</strong>
+                                    <small>Kirim pesan melalui email</small>
+                                </span>
+                                <span class="contact-arrow">↗</span>
+                            </a>
+                        </div>
+
+                        <div class="col-12 col-sm-6">
+                            <a
+                                href="https://www.linkedin.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-button linkedin-button h-100"
+                            >
+                                <span class="contact-icon">in</span>
+                                <span class="contact-button-text">
+                                    <strong>LinkedIn</strong>
+                                    <small>Connect with me</small>
+                                </span>
+                                <span class="contact-arrow">↗</span>
+                            </a>
+                        </div>
+
+                        <div class="col-12 col-sm-6">
+                            <a
+                                href="https://github.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-button github-button h-100"
+                            >
+                                <span class="contact-icon">⌘</span>
+                                <span class="contact-button-text">
+                                    <strong>GitHub</strong>
+                                    <small>Explore my code</small>
+                                </span>
+                                <span class="contact-arrow">↗</span>
+                            </a>
+                        </div>
+
+                        <div class="col-12 col-sm-6">
+                            <a
+                                href="https://www.instagram.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-button instagram-button h-100"
+                            >
+                                <span class="contact-icon">◎</span>
+                                <span class="contact-button-text">
+                                    <strong>Instagram</strong>
+                                    <small>Find me on Instagram</small>
+                                </span>
+                                <span class="contact-arrow">↗</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-note">
+                        <span>♡</span> Thank you for visiting my little space!
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#home" class="footer-logo text-decoration-none">
+                balqis<span>.</span>
+            </a>
+            <p>Made with ♡ by Balqis</p>
+            <a href="#home" class="back-to-top" aria-label="Kembali ke atas">↑</a>
         </div>
+    </footer>
 
-    </section>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-
-    <!-- =========================
-         SKILLS
-    ========================== -->
-
-    <section id="skills" class="skills-section">
-
-        <div class="section-container">
-
-
-            <div class="section-title">
-
-                <span class="green-title">
-                    🌿 MY SKILLS
-                </span>
-
-                <h2>
-                    Things I Love to Create ♡
-                </h2>
-
-            </div>
-
-
-            <div class="skills-grid">
-
-
-                <!-- CANVA -->
-
-                <div class="skill-card green-border">
-
-                    <div class="skill-logo">
-
-                        <img
-                        src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/canva-icon.png"
-                        alt="canva-icon">
-
-                    </div>
-
-                    <h3>
-                        Canva
-                    </h3>
-
-                    <p>
-                        Creating posters, presentations,
-                        social media designs, and visual content.
-                    </p>
-
-                    <span class="skill-level pink-level">
-                        Creative Design
-                    </span>
-
-                </div>
-
-
-                <!-- FIGMA -->
-
-                <div class="skill-card green-border">
-
-                    <div class="skill-logo">
-                        
-                        <img
-                        src="https://s3-alpha.figma.com/hub/file/787485773/66821c0b-fb29-4ece-a775-195db0a7fc2e-cover.png"
-                        alt="figma-icon">
-
-                    </div>
-
-                    <h3>
-                        Figma
-                    </h3>
-
-                    <p>
-                        Designing UI, wireframes,
-                        prototypes, and website interfaces.
-                    </p>
-
-                    <span class="skill-level green-level">
-                        UI / UX Design
-                    </span>
-
-                </div>
-
-
-                <!-- HTML -->
-
-                <div class="skill-card green-border">
-
-                    <div class="skill-logo">
-                        
-                        <img
-                        src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1280px-HTML5_logo_and_wordmark.svg.png?utm_source=id.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
-                        alt="html-icon">
-
-                    </div>
-
-                    <h3>
-                        HTML
-                    </h3>
-
-                    <p>
-                        Creating the structure and
-                        content of modern websites.
-                    </p>
-
-                    <span class="skill-level pink-level">
-                        Web Development
-                    </span>
-
-                </div>
-
-
-                <!-- CSS -->
-
-                <div class="skill-card green-border">
-
-                    <div class="skill-logo">
-                        
-                        <img
-                        src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1920px-CSS3_logo_and_wordmark.svg.png?utm_source=id.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
-                        alt="css-icon">
-
-                    </div>
-
-                    <h3>
-                        CSS
-                    </h3>
-
-                    <p>
-                        Styling websites with layouts,
-                        colors, animations, and responsive design.
-                    </p>
-
-                    <span class="skill-level green-level"> 
-                        Web Styling 
-                    </span>
-
-                </div>
-
-
-                <!-- PYTHON -->
-
-                <div class="skill-card green-border">
-
-                    <div class="skill-logo">
-                        
-                        <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/3840px-Python-logo-notext.svg.png?utm_source=id.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
-                        alt="python-icon">
-
-                    </div>
-
-                    <h3>
-                        Python
-                    </h3>
-
-                    <p>
-                        Creating simple programs,
-                        data processing, and basic applications.
-                    </p>
-
-                    <span class="skill-level pink-level"> 
-                        Programming 
-                    </span>
-
-                </div>
-
-
-                <!-- JAVASCRIPT --> 
-                 
-                <div class="skill-card green-border"> 
-                    
-                    <div class="skill-logo"> 
-                        
-                        <img 
-                        src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/1920px-Javascript-shield.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" 
-                        alt="JavaScript Logo"> 
-                    
-                    </div> 
-                    
-                    <h3>
-                        JavaScript
-                    </h3> 
-                    
-                    <p> 
-                        Adding interaction and dynamic features to websites. 
-                    </p> 
-                    
-                    <span class="skill-level green-level"> 
-                        Web Programming 
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         PROJECTS
-    ========================== -->
-
-    <section id="projects" class="projects-section">
-
-        <div class="section-container">
-
-
-            <div class="section-title">
-
-                <span>
-                    ✿ MY PROJECTS ✿
-                </span>
-
-                <h2>
-                    Little Things I've Created
-                </h2>
-
-            </div>
-
-
-            <div class="projects-grid">
-
-
-                <!-- PROJECT 1 -->
-
-                <div class="project-card">
-
-                    <div class="project-image pink-project">
-                        🖼️
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <span class="project-tag pink-tag">
-                            Graphic Design
-                        </span>
-
-                        <h3>
-                            Caroussel Post
-                        </h3>
-
-                        <p>
-                            foto dokumentasi skomda mengajar pada bulan februari 2026 diedit menjadi caroussel
-                        </p>
-
-                        <a href="https://files.catbox.moe/jlu3tb.png">
-                            View Project →
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- PROJECT 2 -->
-
-                <div class="project-card">
-
-                    <div class="project-image green-project">
-                        🖌️
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <span class="project-tag green-tag">
-                            UI/UX Design
-                        </span>
-
-                        <h3>
-                            GreenStep
-                        </h3>
-
-                        <p>
-                            sebuah rancangan aplikasi agar memudahkan pengguna untuk membuang sampah dan memilah sampah
-                        </p>
-
-                        <a href="https://www.figma.com/design/XfcEpihjKObvOnyw7ByzEg/GreenStep?node-id=0-1&t=rYLGZvLYoAnXDE95-1">
-                            View Project →
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- PROJECT 3 -->
-
-                <div class="project-card">
-
-                    <div class="project-image pink-project">
-                        💻
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section> 
-    <!-- Penutup section Projects -->
-
-    <section id="contact" class="contact-section">
-        <div class="contact-content">
-
-            <div class="contact-icon">💌</div>
-
-            <span class="contact-small-title">♡ LET'S CONNECT ♡</span>
-
-            <h2>
-                Let's Create
-                <span>Something Cute!</span> 🌷
-            </h2>
-
-            <p>
-                Have a project, idea, or just want to say hello?
-                Feel free to reach out and let's create something
-                beautiful together. ♡
-            </p>
-
-            <div class="contact-buttons">
-                <a href="https://www.linkedin.com/in/balqis-aulia-z-995046422/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="contact-button pink-contact">
-                    <span>💌</span>
-                    <div>
-                        <small>LinkedIn</small>
-                        <strong>Balqis Aulia Z.</strong>
-                    </div>
-                </a>
-
-                <a href="https://instagram.com/balqissliaa"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="contact-button green-contact">
-                    <span>🌷</span>
-                    <div>
-                        <small>Instagram</small>
-                        <strong>@balqissliaa</strong>
-                    </div>
-                </a>
-            </div>
-
-            <div class="contact-divider">
-                <span>♡</span>
-                <span>Thank you for visiting my portfolio!</span>
-                <span>♡</span>
-            </div>
-
-        </div>
-    </section>
-  
+    <!-- Navbar JavaScript -->
     <script>
-    const navToggle = document.getElementById("navToggle");
-    const navMenu = document.getElementById("navMenu");
-    const navLinks = navMenu.querySelectorAll("a");
+        const navToggle = document.getElementById("navToggle");
+        const navMenu = document.getElementById("navMenu");
+        const navLinks = navMenu.querySelectorAll("a");
 
-    navToggle.addEventListener("click", function () {
-        const isOpen = navMenu.classList.toggle("active");
+        navToggle.addEventListener("click", function () {
+            const isOpen = navMenu.classList.toggle("active");
 
-        navToggle.classList.toggle("active", isOpen);
-        navToggle.setAttribute("aria-expanded", isOpen);
-        navToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Tutup menu navigasi" : "Buka menu navigasi"
-        );
-    });
-
-    navLinks.forEach(function (link) {
-        link.addEventListener("click", function () {
-        navMenu.classList.remove("active");
-        navToggle.classList.remove("active");
-        navToggle.setAttribute("aria-expanded", "false");
-        navToggle.setAttribute("aria-label", "Buka menu navigasi");
+            navToggle.classList.toggle("active", isOpen);
+            navToggle.setAttribute("aria-expanded", String(isOpen));
+            navToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Tutup menu navigasi" : "Buka menu navigasi"
+            );
         });
-    });
+
+        navLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+                navMenu.classList.remove("active");
+                navToggle.classList.remove("active");
+                navToggle.setAttribute("aria-expanded", "false");
+                navToggle.setAttribute("aria-label", "Buka menu navigasi");
+            });
+        });
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 768) {
+                navMenu.classList.remove("active");
+                navToggle.classList.remove("active");
+                navToggle.setAttribute("aria-expanded", "false");
+            }
+        });
     </script>
+
 </body>
+</html>
